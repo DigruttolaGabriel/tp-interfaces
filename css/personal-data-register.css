@@ -1,0 +1,18 @@
+h2 {
+    width: 33%;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 900px) {
+    #personalDataH2 {
+        width: 100%;
+    }
+
+    #likesH2, #recommendationsH2 {
+        display: none;
+    }
+
+    .progress {
+        /* display: none; */
+    }
+}

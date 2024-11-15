@@ -1,9 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap");
+
 body {
     background-image: radial-gradient(#172C50, #152949, #1A335C, #172C50, #132543);
     background-repeat: no-repeat;
     min-height: 100vw;
-    font-family: 'Roboto'
+    font-family: 'Poppins', sans-serif;
 }
+
+footer {
+    margin-top: 88px; }
+    footer a {
+      color: #FFFFFF; }
+      footer a:hover {
+        color: #FF5900; }
 
 svg {
     color: white;
@@ -192,7 +201,7 @@ option:hover {
 #imgHome {
     border-radius: 25px;
     /* border-radius: 0.375rem; */
-    border: 1px solid #FF5900;
+    /* border: 1px solid #FF5900; */
 }
 
 #imgHomeContainer {
@@ -218,7 +227,12 @@ option:hover {
 }
 
 #chatCard {
+    min-height: 100vw;
     border: 0px solid #FF5900;
+}
+
+#homeFirstSection {
+
 }
 
 .cardMessage {
@@ -231,11 +245,23 @@ option:hover {
         display: none;
     }
 
+    #homeFirstSection {
+        display: flex;
+        flex-direction: column !important;
+    }
+
     #headerContainer {
 
     }
 
 }
+
+@media screen and (min-height: 900px) {
+    #footer-fixed-bottom {
+      position: fixed;
+      bottom: 0;
+      width: 100%; } }
+      
 
 /* MINI DESKTOP */
 @media only screen and (max-width: 1200px) {
@@ -246,5 +272,24 @@ option:hover {
     #titleText {
         font-size: 3rem !important;
     }
+
 }
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 576px) {
+footer #logo-section {
+    text-align: center;
+    order: 6 !important; }
+  footer #footer-social-media {
+    display: flex;
+    justify-content: space-between; }
+    footer #footer-social-media h5 {
+      display: inline; }
+    footer #footer-social-media span {
+      width: 50%; }
+      footer #footer-social-media span a svg {
+        width: 35px; } }
 

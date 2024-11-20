@@ -18,8 +18,4 @@ h2 {
     #personalDataH2, #recommendationsH2 {
         display: none;
     }
-
-    .progress {
-        /* display: none; */
-    }
 }

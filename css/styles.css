@@ -275,6 +275,10 @@ option:hover {
     color: #FF5900;
 }
 
+.border-none {
+    border: none;
+}
+
 #chatCard {
     border: 0px solid #FF5900;
     border-bottom-left-radius: 0;
@@ -321,6 +325,10 @@ option:hover {
 
     }
 
+    .no-mobile {
+        display: none;
+    }
+
 }
 
 @media screen and (min-height: 900px) {
@@ -347,16 +355,33 @@ a {
 }
 
 @media (max-width: 576px) {
-footer #logo-section {
-    text-align: center;
-    order: 6 !important; }
-  footer #footer-social-media {
-    display: flex;
-    justify-content: space-between; }
+
+    #footerContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer #logo-section {
+        margin: 1rem;
+    }
+
+    footer #footer-social-media {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
     footer #footer-social-media h5 {
-      display: inline; }
+        display: inline; 
+    }
+
     footer #footer-social-media span {
-      width: 50%; }
-      footer #footer-social-media span a svg {
-        width: 35px; } }
+         width: 50%; 
+    }
+
+    footer #footer-social-media span a svg {
+        width: 35px; 
+    } 
+}
 

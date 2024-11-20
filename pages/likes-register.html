@@ -58,68 +58,55 @@
             <div class="d-flex justify-content-center ff-jura fs-3h color-orange">Registro</div>
             <div class="container-fluid">
                 <div class="d-flex justify-content-evenly align-items-center">
-                    <h2 class="text-center ff-jura color-orange" id="likesH2">Intereses y Gustos</h2>
                     <h2 class="text-center ff-jura color-white" id="personalDataH2">Datos Personales</h2>
+                    <h2 class="text-center ff-jura color-orange" id="likesH2">Intereses y Gustos</h2>
                     <h2 class="text-center ff-jura color-white" id="recommendationsH2">Recomendaciones</h2>
                 </div>
                 <div class="progress mt-2 mb-4">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <div class="card px-2 mt-4" id="chatCard">
                     <div class="card-header d-flex">
                     </div>
                     <div class="card-body mt-2 color-white">
                         <div class="d-flex flex-column">
-                            <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 chat-message-left" >
+                            <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 chat-message-left" id="firstMessage">
                                 <div class="card-header d-flex">
                                     <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
-                                    IA Name
+                                    Learny
                                 </div>
                                 <div class="card-body color-white">
-                                    <p class="card-text">Hola! Soy <b> IA Name </b>! Sere tu asistente en este camino.</p>
-                                    <p class="card-text">Selecciona las tematicas que estas buscando aprender</p>
+                                    <p class="card-text">Perfecto, Mario! Ahora te voy a pedir algunos datos para conocerte mas y poder guiarte mejor.</p>
                                 </div>
                             </div>
-                            <div class="card border-light mb-3  col-lg-6 col-md-10 col-sm-8 align-self-end chat-message-right" id="likesUserCard">
-                                <div class="card-header d-flex justify-content-end">
-                                    User Name
+                            <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 chat-message-left" id="secondMessage">
+                                <div class="card-header d-flex">
                                     <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                    Learny
                                 </div>
                                 <div class="card-body color-white">
-                                    <p class="card-text">Estoy interesado en:</p>
-                                    <div class="d-flex justify-content-evenly align-content-around flex-wrap">
-                                        <div class="form-check m-2">
-                                            <input class="form-check-input" type="checkbox" value="Base de datos" id="" checked>
-                                            <label class="form-check-label" for="">
-                                            Base de datos
-                                            </label>
-                                        </div>
-                                        <div class="form-check m-2">
-                                            <input class="form-check-input" type="checkbox" value="Finanzas" id="">
-                                            <label class="form-check-label" for="">
-                                            Finanzas
-                                            </label>
-                                        </div>
-                                        <div class="form-check m-2">
-                                            <input class="form-check-input" type="checkbox" value="Marketing" id="">
-                                            <label class="form-check-label" for="">
-                                            Marketing
-                                            </label>
-                                        </div>
-                                        <div class="form-check m-2">
-                                            <input class="form-check-input" type="checkbox" value="Desarrollo de software" id="" checked>
-                                            <label class="form-check-label" for="">
-                                            Desarrollo de software
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <p class="card-text">A que te dedicas?</p>
                                 </div>
                             </div>
+                            
+                            <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 align-self-end chat-message-right" id="ocupationCard"></div>
+
+                            <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 chat-message-left" id="carrerQuestionCard"></div>
+
+                            <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 align-self-end chat-message-right" id="carrerCard"></div>
+
+                            <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 chat-message-left" id="likesQuestionCard"></div>
+
+                            <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 align-self-end chat-message-right" id="likesCard"></div>
+
+                            <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 chat-message-left" id="finalQuestionCard"></div>
+
                         </div>
                     </div>
                     <div class="card-footer color-white">
-                        <div class="d-flex justify-content-end pt-2">
-                            <a class="btn btn-orange" href="personal-data-register.html">Continuar</a>
+                        <div class="d-flex justify-content-evenly pt-2">
+                            <input type="text" class="form-control message-chat-input w-75 color-white" placeholder="Escribime por aca" aria-label="Input group example" aria-describedby="btnGroupAddon">
+                            <button type="button" class="btn btn-orange mx-2">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -187,7 +174,262 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script>
-        document.getElementsByClassName('chat-message-left')[0].className = 'card border-light mb-3 col-lg-6 col-md-10 col-sm-8 chat-message-left showing';
+
+        document.getElementById("firstMessage").style.display = "block"
+        document.getElementById("firstMessage").innerHTML = 
+            `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            </div>`
+        setTimeout(() => {
+            document.getElementById("firstMessage").innerHTML = 
+                `<div class="card-header d-flex">
+                    <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                    Learny
+                </div>
+                <div class="card-body color-white mx-2">
+                    <p class="card-text">Perfecto, Mario! Ahora te voy a pedir algunos datos para conocerte mas y poder guiarte mejor.</p>
+                </div>`
+            document.getElementById("secondMessage").style.display = "block"
+            document.getElementById("secondMessage").innerHTML = 
+                `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                </div>`
+            setTimeout(() => {
+                document.getElementById("secondMessage").innerHTML = 
+                    `<div class="card-header d-flex">
+                        <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                        Learny
+                    </div>
+                    <div class="card-body color-white mx-2">
+                        <p class="card-text">A que te dedicas?</p>
+                    </div>`
+
+                document.getElementById("ocupationCard").style.display = "block"
+                document.getElementById("ocupationCard").innerHTML = 
+                    `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </div>`
+
+                setTimeout(() => {
+                    document.getElementById("ocupationCard").innerHTML =
+                        `<div class="card-header d-flex justify-content-end">
+                            Vos
+                            <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
+                            <form class="row g-3 d-flex w-100" novalidate id="submitOcupationForm">
+                                <div class="col-md-12">
+                                    <label for="inputName" class="form-label">Tu ocupacion</label>
+                                    <input type="text" class="form-control" id="inputName" required>
+                                    <div class="invalid-feedback">
+                                        Debes ingresar tu ocupacion.
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-orange" onclick="submitOcupation()">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" id="submitOcupationLoading"></span>
+                                        Continuar</button>
+                                </div>
+                            </form>
+                        </div>`
+                }, 1000)
+            }, 1000)
+        }, 1000)
+
+        function submitOcupation() {
+            var forms = document.querySelectorAll('#submitOcupationForm')
+
+            Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                event.preventDefault()
+                event.stopPropagation()
+                if (form.checkValidity()) {
+                    document.getElementById("submitOcupationLoading").style.display = "inline-block"
+                    document.getElementById("carrerQuestionCard").style.display = "block"
+                    document.getElementById("carrerQuestionCard").innerHTML = 
+                        `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        </div>`
+                    setTimeout(() => {
+                        document.getElementById("carrerQuestionCard").innerHTML =
+                            `<div class="card-header d-flex">
+                                <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                Learny
+                            </div>
+                            <div class="card-body color-white mx-2">
+                                <p class="card-text">Estudias?</p>
+                            </div>`
+                        document.getElementById("submitOcupationLoading").style.display = "none"
+                        document.getElementById("carrerCard").style.display = "block"
+                        document.getElementById("carrerCard").innerHTML = 
+                            `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            </div>`
+
+                        setTimeout(() => {
+                            document.getElementById("carrerCard").innerHTML = 
+                                `<div class="card-header d-flex justify-content-end">
+                                    Vos
+                                    <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                </div>
+                                <div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
+                                    <form class="row g-3 d-flex w-100" novalidate id="submitCarrerForm">
+                                        <div class="col-md-12">
+                                            <label for="inputState" class="form-label">Tu carrera</label>
+                                            <select id="inputState" class="form-select" required onchange="addExtraInputForCarrer()">
+                                                <option selected>No estudio actualmente</option>
+                                                <option>Ingenieria</option>
+                                                <option>Arministracion de empresas</option>
+                                                <option>Contabilidad</option>
+                                                <option>Desarrollo web</option>
+                                                <option>Otro</option>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                Debes ingresar tu carrera.
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end">
+                                            <button type="submit" class="btn btn-orange" onclick="submitCarrer()">
+                                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" id="submitCarrerLoading"></span>
+                                                Continuar</button>
+                                        </div>
+                                    </form>
+                                </div>`
+                        }, 1000);
+                    }, 1000);
+                }
+
+                form.classList.add('was-validated')
+                }, false)
+            })
+        }
+
+        function submitCarrer() {
+            var forms = document.querySelectorAll('#submitCarrerForm')
+
+            Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                event.preventDefault()
+                event.stopPropagation()
+                if (form.checkValidity()) {
+                    document.getElementById("submitCarrerLoading").style.display = "inline-block"
+                    document.getElementById("likesQuestionCard").style.display = "block"
+                    document.getElementById("likesQuestionCard").innerHTML = 
+                    `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
+                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    </div>`
+                    setTimeout(() => {
+                        document.getElementById("likesQuestionCard").innerHTML =
+                            `<div class="card-header d-flex">
+                                <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                Learny
+                            </div>
+                            <div class="card-body color-white mx-2">
+                                <p class="card-text">Selecciona las tematicas que estas buscando aprender o en las que estes interesado</p>
+                            </div>`
+                        document.getElementById("submitCarrerLoading").style.display = "none"
+                        document.getElementById("likesCard").style.display = "block"
+                        document.getElementById("likesCard").innerHTML = 
+                            `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
+                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            </div>`
+
+                        setTimeout(() => {
+                            document.getElementById("likesCard").innerHTML = 
+                                `<div class="card-header d-flex justify-content-end">
+                                    Vos
+                                    <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                </div>
+                                <div class="card-body color-white">
+                                    <div class="d-flex justify-content-evenly align-content-around flex-wrap">
+                                        <form class="row g-3 d-flex w-100" novalidate id="submitLikesForm">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="form-check m-2">
+                                                    <input class="form-check-input" type="checkbox" value="Base de datos" id="">
+                                                    <label class="form-check-label" for="">
+                                                    Base de datos
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="form-check m-2">
+                                                    <input class="form-check-input" type="checkbox" value="Finanzas" id="">
+                                                    <label class="form-check-label" for="">
+                                                    Finanzas
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="form-check m-2">
+                                                    <input class="form-check-input" type="checkbox" value="Marketing" id="">
+                                                    <label class="form-check-label" for="">
+                                                    Marketing
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <div class="form-check m-2">
+                                                    <input class="form-check-input" type="checkbox" value="Desarrollo de software" id="">
+                                                    <label class="form-check-label" for="">
+                                                    Desarrollo de software
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-end">
+                                                <button type="submit" class="btn btn-orange" onclick="submitLikes()">
+                                                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" id="submitLikesLoading"></span>
+                                                    Continuar</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>`
+                        }, 1000);
+                    }, 1000);
+                }
+
+                form.classList.add('was-validated')
+                }, false)
+            })
+        }
+
+        function submitLikes() {
+            var forms = document.querySelectorAll('#submitLikesForm')
+
+            Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                event.preventDefault()
+                event.stopPropagation()
+                if (form.checkValidity()) {
+                    document.getElementById("submitLikesLoading").style.display = "inline-block"
+                    document.getElementById("finalQuestionCard").style.display = "block"
+                    document.getElementById("finalQuestionCard").innerHTML = 
+                        `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        </div>`
+                    setTimeout(() => {
+                        document.getElementById("finalQuestionCard").innerHTML =
+                            `<div class="card-header d-flex">
+                                <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                Learny
+                            </div>
+                            <div class="card-body color-white mx-2">
+                                <p class="card-text">Gracias por contarme sobre vos! Dame unos segundos para procesar la informacion y terminar con tu registro!</p>
+                            </div>`
+
+                        setTimeout(() => {
+                            window.location.href = 'recommendations-register.html';
+                        }, 6000);
+                    }, 1000);
+                }
+
+                form.classList.add('was-validated')
+                }, false)
+            })
+        }
+
     </script>
 </body>
 </html>

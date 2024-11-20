@@ -3,7 +3,7 @@
 body {
     background-image: radial-gradient(#172C50, #152949, #1A335C, #172C50, #132543);
     background-repeat: no-repeat;
-    min-height: 100vw;
+    /* min-height: 100vw; */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -262,7 +262,7 @@ option:hover {
 }
 
 #dropdownCategories {
-    background-color: transparent;
+    background-color: #132543;
     border: 1px solid #FF5900;
     width: auto;
 }

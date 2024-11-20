@@ -5,7 +5,8 @@ h2 {
 #externalLoginIAResponse, #signUpIAResponse, 
 #externalLoginUserResponse, #signUpUserResponse, 
 #externalLoginUserSuccess, #externalLoginLoading,
-#createAccountLoading {
+#createAccountLoading, #firstMessage, #secondMessage,
+#loginOptionCard {
     display: none;
 }
 

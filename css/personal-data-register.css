@@ -2,6 +2,13 @@ h2 {
     width: 33%;
 }
 
+#externalLoginIAResponse, #signUpIAResponse, 
+#externalLoginUserResponse, #signUpUserResponse, 
+#externalLoginUserSuccess, #externalLoginLoading,
+#createAccountLoading {
+    display: none;
+}
+
 /* MOBILE */
 @media only screen and (max-width: 900px) {
     #personalDataH2 {

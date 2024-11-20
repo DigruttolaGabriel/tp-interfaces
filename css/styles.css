@@ -50,6 +50,55 @@ svg {
     color: white;
 }
 
+.btn-learny {
+    background-color: white;
+    border-color: white;
+    color: black;
+}
+
+.btn-learny:hover {
+    background-color: transparent;
+    border-color: #FF5900;
+    color: #FF5900;
+}
+
+.btn-google {
+    background-color: white;
+    border-color: white;
+    color: black;
+}
+
+.btn-google:hover {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+}
+
+.btn-facebook {
+    background-color: #039be5;
+    border-color: #039be5;
+    color: white;
+}
+
+.btn-facebook:hover {
+    background-color: transparent;
+    border-color: #039be5;
+    color: white;
+}
+
+.btn-apple {
+    background-color: black;
+    border-color: black;
+    color: white;
+}
+
+.btn-apple:hover {
+    background-color: transparent;
+    border-color: black;
+    color: white;
+}
+
+
 .input-group-text {
     background-color: white;
 }
@@ -227,8 +276,26 @@ option:hover {
 }
 
 #chatCard {
-    min-height: 100vw;
     border: 0px solid #FF5900;
+    border-bottom-left-radius: 0;
+}
+
+#chatCardContainer {
+    height: 100%;
+    /* max-height: 600px;*/
+    overflow-y: scroll; 
+}
+
+.chat-message-left {
+    border-radius: 0 3rem 3rem 3rem;
+}
+
+.chat-message-right {
+    border-radius: 3rem 0 3rem 3rem;
+}
+
+.chat-message-left::before {
+    opacity: 1;
 }
 
 #homeFirstSection {

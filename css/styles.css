@@ -439,6 +439,7 @@ a {
 
 #carouselExampleCaptions{
     background-color:antiquewhite;
+
 }
 
 .estudiante{
@@ -446,3 +447,28 @@ a {
 }
 
 
+
+
+body, html {
+    overflow-x: hidden;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajuste para centrarlos completamente */
+    width: 50px; /* Controlar el tamaño de los botones */
+    height: 50px; /* Ajustar el tamaño */
+    z-index: 5; /* Asegúrate de que estén por encima de las imágenes */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente oscuro para mejorar la visibilidad */
+    border-radius: 50%; /* Para hacerlo redondo */
+    font-size: 1.5rem; /* Ajusta el tamaño del icono */
+}
+
+.carousel-control-prev {
+    left: 10px; /* Ajusta la distancia desde la izquierda */
+}
+
+.carousel-control-next {
+    right: 10px; /* Ajusta la distancia desde la derecha */
+}

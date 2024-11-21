@@ -49,7 +49,7 @@
                         <button type="button" class="btn btn-orange mx-2">Ingresar</button>
                         <a class="btn btn-orange" href="likes-register.html">Registrarse</a>
                     </div>
-                </div>  
+                </div>
             </div>
         </nav>
     </header>
@@ -72,7 +72,7 @@
                         <div class="d-flex flex-column">
                             <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 chat-message-left" id="firstMessage"></div>
                             <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 chat-message-left" id="secondMessage"></div>
-                            
+
                             <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 align-self-end chat-message-right" id="ocupationCard"></div>
 
                             <div class="card border-light mb-3 col-lg-6 col-md-10 col-sm-8 chat-message-left" id="carrerQuestionCard"></div>
@@ -160,28 +160,28 @@
     <script>
 
         document.getElementById("firstMessage").style.display = "block"
-        document.getElementById("firstMessage").innerHTML = 
+        document.getElementById("firstMessage").innerHTML =
             `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             </div>`
         setTimeout(() => {
-            document.getElementById("firstMessage").innerHTML = 
+            document.getElementById("firstMessage").innerHTML =
                 `<div class="card-header d-flex">
-                    <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                <img src="../img/Cabeza.svg" alt="" width="24" height="24" class="mx-2">
                     Learny
                 </div>
                 <div class="card-body color-white mx-2">
                     <p class="card-text">Perfecto, Mario! Ahora te voy a pedir algunos datos para conocerte mas y poder guiarte mejor.</p>
                 </div>`
             document.getElementById("secondMessage").style.display = "block"
-            document.getElementById("secondMessage").innerHTML = 
+            document.getElementById("secondMessage").innerHTML =
                 `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 </div>`
             setTimeout(() => {
-                document.getElementById("secondMessage").innerHTML = 
+                document.getElementById("secondMessage").innerHTML =
                     `<div class="card-header d-flex">
-                        <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                <img src="../img/Cabeza.svg" alt="" width="24" height="24" class="mx-2">
                         Learny
                     </div>
                     <div class="card-body color-white mx-2">
@@ -189,7 +189,7 @@
                     </div>`
 
                 document.getElementById("ocupationCard").style.display = "block"
-                document.getElementById("ocupationCard").innerHTML = 
+                document.getElementById("ocupationCard").innerHTML =
                     `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                     </div>`
@@ -231,14 +231,14 @@
                 if (form.checkValidity()) {
                     document.getElementById("submitOcupationLoading").style.display = "inline-block"
                     document.getElementById("carrerQuestionCard").style.display = "block"
-                    document.getElementById("carrerQuestionCard").innerHTML = 
+                    document.getElementById("carrerQuestionCard").innerHTML =
                         `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
                             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         </div>`
                     setTimeout(() => {
                         document.getElementById("carrerQuestionCard").innerHTML =
                             `<div class="card-header d-flex">
-                                <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                <img src="../img/Cabeza.svg" alt="" width="24" height="24" class="mx-2">
                                 Learny
                             </div>
                             <div class="card-body color-white mx-2">
@@ -246,13 +246,13 @@
                             </div>`
                         document.getElementById("submitOcupationLoading").style.display = "none"
                         document.getElementById("carrerCard").style.display = "block"
-                        document.getElementById("carrerCard").innerHTML = 
+                        document.getElementById("carrerCard").innerHTML =
                             `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                             </div>`
 
                         setTimeout(() => {
-                            document.getElementById("carrerCard").innerHTML = 
+                            document.getElementById("carrerCard").innerHTML =
                                 `<div class="card-header d-flex justify-content-end">
                                     Vos
                                     <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
@@ -300,14 +300,14 @@
                 if (form.checkValidity()) {
                     document.getElementById("submitCarrerLoading").style.display = "inline-block"
                     document.getElementById("likesQuestionCard").style.display = "block"
-                    document.getElementById("likesQuestionCard").innerHTML = 
+                    document.getElementById("likesQuestionCard").innerHTML =
                     `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
                         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                     </div>`
                     setTimeout(() => {
                         document.getElementById("likesQuestionCard").innerHTML =
                             `<div class="card-header d-flex">
-                                <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                <img src="../img/Cabeza.svg" alt="" width="24" height="24" class="mx-2">
                                 Learny
                             </div>
                             <div class="card-body color-white mx-2">
@@ -315,13 +315,13 @@
                             </div>`
                         document.getElementById("submitCarrerLoading").style.display = "none"
                         document.getElementById("likesCard").style.display = "block"
-                        document.getElementById("likesCard").innerHTML = 
+                        document.getElementById("likesCard").innerHTML =
                             `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                             </div>`
 
                         setTimeout(() => {
-                            document.getElementById("likesCard").innerHTML = 
+                            document.getElementById("likesCard").innerHTML =
                                 `<div class="card-header d-flex justify-content-end">
                                     Vos
                                     <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
@@ -389,14 +389,14 @@
                 if (form.checkValidity()) {
                     document.getElementById("submitLikesLoading").style.display = "inline-block"
                     document.getElementById("finalQuestionCard").style.display = "block"
-                    document.getElementById("finalQuestionCard").innerHTML = 
+                    document.getElementById("finalQuestionCard").innerHTML =
                         `<div class="card-body d-flex flex-column justify-content-center align-items-center color-white">
                             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                         </div>`
                     setTimeout(() => {
                         document.getElementById("finalQuestionCard").innerHTML =
                             `<div class="card-header d-flex">
-                                <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                                <img src="../img/Cabeza.svg" alt="" width="24" height="24" class="mx-2">
                                 Learny
                             </div>
                             <div class="card-body color-white mx-2">

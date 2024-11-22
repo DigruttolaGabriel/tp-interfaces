@@ -55,6 +55,15 @@ svg {
     color: white;
 }
 
+
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+
 .btn-learny {
     background-color: white;
     border-color: white;
@@ -292,7 +301,7 @@ option:hover {
 #chatCardContainer {
     height: 100%;
     /* max-height: 600px;*/
-    overflow-y: scroll; 
+    overflow-y: scroll;
 }
 
 .chat-message-left {
@@ -407,7 +416,7 @@ option:hover {
       position: fixed;
       bottom: 0;
       width: 100%; } }
-      
+
 
 /* MINI DESKTOP */
 @media only screen and (max-width: 1200px) {
@@ -448,11 +457,11 @@ a {
     }
 
     footer #footer-social-media h5 {
-        display: inline; 
+        display: inline;
     }
 
     footer #footer-social-media span {
-         width: 50%; 
+         width: 50%;
     }
 
     footer #footer-social-media span a svg {
@@ -474,5 +483,77 @@ a {
         justify-items: center !important;
         align-items: center !important;
     } */
+
+    .colCarrouser{
+        color: black;
+        height: 30%;
+    }
+
+
 }
 
+/* Imágenes responsivas dentro de las tarjetas */
+.card-img-top {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    aspect-ratio: 16 / 9; /* Mantiene una relación de aspecto constante (puedes ajustar) */
+    object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
+}
+
+
+
+/* Tarjetas responsivas */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el contenido uniformemente */
+    height: 100%; /* Todas las tarjetas tendrán la misma altura */
+}
+
+.card-body {
+    flex-grow: 1; /* Permite que el cuerpo de la tarjeta se expanda según el contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaciado uniforme */
+}
+
+/* Asegurar que todo sea responsivo */
+.container {
+    max-width: 100%; /* La galería se adapta al ancho del viewport */
+    padding: 1rem; /* Espaciado interno adaptable */
+}
+
+#carouselExampleCaptions{
+    background-color:antiquewhite;
+
+}
+
+.estudiante{
+    margin-left: 10%;
+}
+
+
+
+
+body, html {
+    overflow-x: hidden;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajuste para centrarlos completamente */
+    width: 50px; /* Controlar el tamaño de los botones */
+    height: 50px; /* Ajustar el tamaño */
+    z-index: 5; /* Asegúrate de que estén por encima de las imágenes */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente oscuro para mejorar la visibilidad */
+    border-radius: 50%; /* Para hacerlo redondo */
+    font-size: 1.5rem; /* Ajusta el tamaño del icono */
+}
+
+.carousel-control-prev {
+    left: 10px; /* Ajusta la distancia desde la izquierda */
+}
+
+.carousel-control-next {
+    right: 10px; /* Ajusta la distancia desde la derecha */
+}

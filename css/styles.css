@@ -7,8 +7,13 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+header {
+    background-color: #132543;
+}
+
 footer {
-    margin-top: 88px; }
+    margin-top: 88px; 
+background-color: #132543;}
     footer a {
       color: #FFFFFF; }
       footer a:hover {
@@ -280,7 +285,7 @@ option:hover {
     color: white;
 }
 
-.navbarDropdown:focus {
+#navbarDropdown:focus {
     color: #FF5900;
 }
 
@@ -322,7 +327,65 @@ option:hover {
 .section-container {
     border: 1px solid #FF5900 !important;
     border-bottom-left-radius: 0;
+}
 
+.nav-link:hover {
+    color: #FF5900;
+}
+
+#buttonNavbar {
+    border: none;
+}
+
+#buttonNavbar:focus {
+    box-shadow: none;
+}
+
+#buttonNavbar:hover {
+    border: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    opacity: 0.5;
+    border-radius: 10px;
+  }
+
+/* MOBILE */
+@media only screen and (max-width: 991px) {
+
+    #navbarOffcanvasLg {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: left !important;
+        align-items: start !important;
+
+        background-color: #132543;
+
+        width: 60%;
+    }
+
+    .no-mobile {
+        display: none !important;
+    }
+
+    #offcanvasMobile {
+        display: block !important;
+        overflow-y: scroll;
+        width: 100%;
+    }
 }
 
 /* MOBILE */
@@ -341,8 +404,10 @@ option:hover {
     }
 
     .no-mobile {
-        display: none;
+        display: none !important;
     }
+
+
 
 }
 
@@ -350,7 +415,10 @@ option:hover {
     #footer-fixed-bottom {
       position: fixed;
       bottom: 0;
-      width: 100%; } }
+      width: 100%; } 
+    
+    
+    }
 
 
 /* MINI DESKTOP */
@@ -371,6 +439,10 @@ a {
 
 @media (max-width: 576px) {
 
+    .no-mini-mobile {
+        display: none !important;
+    }
+    
     #footerContainer {
         display: flex;
         flex-direction: column;
@@ -396,21 +468,61 @@ a {
     }
 
     footer #footer-social-media span a svg {
-        width: 35px;
+        width: 35px; 
+    } 
+
+    #navbarOffcanvasLg {
+
     }
+
+    .col-sm-12 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+
+    /* .mini-title {
+        display: flex;
+        flex-direction: column;
+        justify-items: center !important;
+        align-items: center !important;
+    } */
 
     .colCarrouser{
         color: black;
         height: 30%;
     }
 
+    
+    .mobile-center {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
 
+    .card.m-sm-1.mobile-mt-1 {
+        text-align: center;
+    }
+
+    main {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+}
+
+.min-h-300 {
+    min-height: 300px;
+}
+
+.max-w-500 {
+    max-width: 400px;
 }
 
 /* Imágenes responsivas dentro de las tarjetas */
 .card-img-top {
     width: 100%; /* La imagen ocupará todo el ancho del contenedor */
     aspect-ratio: 16 / 9; /* Mantiene una relación de aspecto constante (puedes ajustar) */
+    min-height: 50%;
     object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
 }
 

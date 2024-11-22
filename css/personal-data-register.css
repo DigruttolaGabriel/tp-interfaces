@@ -6,7 +6,7 @@ h2 {
 #externalLoginUserResponse, #signUpUserResponse, 
 #externalLoginUserSuccess, #externalLoginLoading,
 #createAccountLoading, #firstMessage, #secondMessage,
-#loginOptionCard {
+#loginOptionCard, #finalQuestionCard {
     display: none;
 }
 

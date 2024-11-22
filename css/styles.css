@@ -510,10 +510,19 @@ a {
 
 }
 
+.min-h-300 {
+    min-height: 300px;
+}
+
+.max-w-500 {
+    max-width: 400px;
+}
+
 /* Imágenes responsivas dentro de las tarjetas */
 .card-img-top {
     width: 100%; /* La imagen ocupará todo el ancho del contenedor */
     aspect-ratio: 16 / 9; /* Mantiene una relación de aspecto constante (puedes ajustar) */
+    min-height: 50%;
     object-fit: cover; /* Recorta y ajusta la imagen sin deformarla */
 }
 

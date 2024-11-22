@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de Desarrollo Web</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles-gian.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -13,51 +12,130 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 </head>
 <body>
-    <header class="px-4 pt-3">
-        <nav class="navbar navbar-expand-lg navbar-light">
+    <header class="px-4">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid px-2">
-                <a class="navbar-brand px-sm-4 px-lg-5 px-4" href="home.html">
-                    <img src="../img/brand.svg" alt="" width="48" height="48" class="color-orange">
-                </a>
-                <button class="navbar-toggler color-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon color-white"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-evenly" id="navbarSupportedContent">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
+                <div class="d-flex flex-row justify-content-between col-lg-2 col-md-12 col-sm-12">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg" id="buttonNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="home.html">
+                        <img src="../img/brand.svg" alt="" width="48" height="48" class="color-orange">
+                    </a>
+                </div>
+                <div class="offcanvas offcanvas-start d-flex flex-row justify-content-around align-items-center" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
+                    <ul class="navbar-nav mb-2 mb-lg-0 no-mobile">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle color-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categorias
+                                Categorías
                             </a>
-                            <ul class="dropdown-menu w-25" aria-labelledby="navbarDropdown" id="dropdownCategories">
-                                <li><a class="dropdown-item" href="#techSection">Tecnologia</a></li>
-                                <li><a class="dropdown-item" href="#financesSection">Finanzas</a></li>
+                            <ul class="dropdown-menu w-30 " aria-labelledby="navbarDropdown" id="dropdownCategories">
+                                <li><span class="dropdown-item-text color-light-grey fs-07">Más Populares</span></li>
+                                <li><a class="dropdown-item" href="#techSection">Desarrollo Web</a></li>
+                                <li><a class="dropdown-item" href="#designSection">Diseño Gráfico</a></li>
+                                <li><span class="dropdown-item-text color-light-grey fs-07">Todas</span></li>
+                                <li><a class="dropdown-item" href="#techSection">Tecnología</a></li>
+                                <li><a class="dropdown-item" href="courses.html">Finanzas</a></li>
+                                <li><a class="dropdown-item" href="courses.html">Contabilidad</a></li>
+                                <li><a class="dropdown-item" href="courses.html">Marketing Digital</a></li>
+                                <li><a class="dropdown-item" href="courses.html">Emprendimiento</a></li>
+                                <li><a class="dropdown-item" href="courses.html">Informática General</a></li>
+                                <li><a class="dropdown-item" href="courses.html">Fotografía y Video</a></li>
                             </ul>
                         </li>
                     </ul>
-                    <div class="input-group d-flex justify-content-end w-50">
+                    <div class="input-group d-flex justify-content-end w-50 no-mobile">
                         <input type="text" class="form-control search-input color-white" placeholder="Buscar" aria-label="Input group example" aria-describedby="btnGroupAddon">
-                        <div class="input-group-text search-input" id="btnSearch">
+                        <button class="btn btn-orange-outline search-input" id="btnSearch">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                             </svg>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center pt-2 pt-sm-2 pt-md-0 pt-lg-0 no-mobile">
+                        <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
+                        <button type="button" class="btn btn-orange-outline mx-2">Ingresar</button>
+                        <a class="btn btn-orange-outline" href="personal-data-register.html">Registrarse</a>
+                    </div>
+                    <div class="d-none" id="offcanvasMobile">
+                        <div class="offcanvas-header w-100">
+                            <h5 class="offcanvas-title ff-jura text-nowrap color-orange" id="offcanvasNavbarLabel">Learn-Academy</h5>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1">
+                                <li class="nav-item d-flex align-items-center mini-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play-btn" viewBox="0 0 16 16">
+                                        <path d="M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm15 0a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z"/>
+                                    </svg>
+                                    <span class="nav-link-text mx-2 color-white ff-jura">Cursos</span>
+                                </li>
+                                <li class="nav-item">
+                                    <span class="nav-link-text color-light-grey fs-07">Más Populares</span>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color-white" href="#techSection">Desarrollo Web</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color-white" href="#designSection">Diseño Gráfico</a>
+                                </li>
+                                <li class="nav-item">
+                                    <span class="nav-link-text color-light-grey fs-07">Todos</span>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color-white" href="courses.html">Tecnología</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color-white" href="courses.html">Finanzas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color-white" href="courses.html">Contabilidad</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color-white" href="courses.html">Marketing Digital</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color-white" href="courses.html">Emprendimiento</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color-white" href="courses.html">Informática General</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link color-white" href="courses.html">Fotografía y Video</a>
+                                </li>
+                                <hr class="color-white">
+                                <li class="nav-item d-flex align-items-center mini-title">
+                                    <img src="../img/Cabeza.svg" alt="" width="28" height="28">
+                                    <a class="nav-link mx-2 color-white ff-jura" href="#">Learny</a>
+                                </li>
+                                <li class="nav-item d-flex align-items-center mini-title">
+                                    <img src="../img/brand.svg" alt="" width="28" height="28" class="color-orange">
+                                    <a class="nav-link mx-2 color-white ff-jura" href="#">Descargá la App</a>
+                                </li>
+                                <hr class="color-white">
+                                <li class="nav-item d-flex align-items-center mini-title">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                    </svg>
+                                    <span class="nav-link-text mx-2 color-white ff-jura">Tu</span>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="d-flex flex-column justify-content-start align-items-start pt-2 pt-sm-2 pt-md-0 pt-lg-0">
+                                        <button type="button" class="btn btn-orange-outline my-1">Ingresar</button>
+                                        <a class="btn btn-orange-outline my-1" href="personal-data-register.html">Registrarse</a>
+                                        <img src="../img/cuadrado.png" alt="" width="24" height="24" class="my-1">
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-end align-items-center pt-2 pt-sm-2 pt-md-0 pt-lg-0">
-                        <img src="../img/cuadrado.png" alt="" width="24" height="24" class="mx-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart mx-2" viewBox="0 0 16 16">
-                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                        </svg>
-                        <button type="button" class="btn btn-orange-outline mx-2">Ingresar</button>
-                        <a class="btn btn-orange-outline" href="likes-register.html">Registrarse</a>
-                    </div>
-                </div>  
+                </div>
             </div>
         </nav>
     </header>
-    <main class="container py-5">
+    <main class="container py-5 d-flex flex-column justify-content-center align-items-center ">
         <!-- Encabezado del curso -->
-        <div class="course-header">
-            <h1>Introducción a Desarrollo Web</h1>
+        <div class="course-header col-10 col-lg-8 col-md-10 col-sm-10">
+            <h1 class="ff-jura">Introducción a Desarrollo Web</h1>
             <div class="video-container">
                 <iframe 
                     src="https://www.youtube.com/embed/m86Bdh47IZM" 
@@ -89,25 +167,25 @@
                 </svg>
                 <span>Gratis</span>
             </div>
-            <button class="start-button mt-3">Empezar Curso</button>
+            <button class="btn btn-orange mt-3">Empezar Curso</button>
         </div>
 
         <!-- Sección: Acerca del curso -->
-        <section>
-            <h2 class="section-title">Acerca del curso</h2>
-            <p>Dentro de este curso podrás iniciarte en el mundo de desarrollo web aprendiendo acerca de los conceptos básicos.</p>
+        <section class="course-header col-10 col-lg-8 col-md-10 col-sm-10">
+            <h2 class="section-title ff-jura">Acerca del curso</h2>
+            <p class="pt-3">Dentro de este curso podrás iniciarte en el mundo de desarrollo web aprendiendo acerca de los conceptos básicos.</p>
         </section>
 
         <!-- Sección: Materiales -->
-        <section>
-            <h2 class="section-title">Materiales</h2>
-            <div class="card bg-light text-white">
+        <section class="course-header col-10 col-lg-8 col-md-10 col-sm-10">
+            <h2 class="section-title ff-jura">Materiales</h2>
+            <div class="card border-none text-white">
                 <div class="card-body d-flex justify-content-between align-items-center">
                     <div>
                         <h5 class="card-title">Visual Studio Code</h5>
                         <p class="card-text">Descargar Visual Studio Code (ejecutable)</p>
                     </div>
-                    <a href="#" class="btn btn-outline-secondary">
+                    <a href="#" class="btn btn-orange-outline mt-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
                         <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
                         <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
@@ -117,126 +195,103 @@
         </section>
 
         <!-- Sección: Plan de estudios -->
-        <section class="mt-4">
-            <h2 class="section-title">Plan de estudios</h2>
-            <div class="accordion" id="studyPlanAccordion">
-        <!-- Unidad 1 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="heading1">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                    Unidad 1: HTML
-                </button>
-            </h2>
-            <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#studyPlanAccordion">
-                <div class="accordion-body">
-                    <ul class="list-unstyled temario-list">
-                        <li><a href="#">Introducción al lenguaje HTML</a></li>
-                        <li><a href="#">Estructura básica de un documento HTML</a></li>
-                        <li><a href="#">Etiquetas y elementos</a></li>
-                        <li><a href="#">Uso de atributos</a></li>
-                        <li><a href="#">Enlaces y navegación</a></li>
-                        <li><a href="#">Imágenes y multimedia</a></li>
-                        <li><a href="#">Tablas en HTML</a></li>
-                        <li><a href="#">Formularios y validación básica</a></li>
-                    </ul>
-                    <div class="mt-3 p-2 text-center bg-danger text-white rounded">Ejercicio Integrador </div>
+        <section class="course-header col-10 col-lg-8 col-md-10 col-sm-10">
+            <h2 class="section-title ff-jura">Plan de estudios</h2>
+            <div class="accordion pt-3" id="studyPlanAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                            Unidad 1: HTML
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="heading1" data-bs-parent="#studyPlanAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled temario-list d-flex flex-column justify-content-start align-items-start">
+                                <li><a href="#" class="info-unit">Introducción al lenguaje HTML</a></li>
+                                <li><a href="#" class="info-unit">Estructura básica de un documento HTML</a></li>
+                                <li><a href="#" class="info-unit">Etiquetas y elementos</a></li>
+                                <li><a href="#" class="info-unit">Uso de atributos</a></li>
+                                <li><a href="#" class="info-unit">Enlaces y navegación</a></li>
+                                <li><a href="#" class="info-unit">Imágenes y multimedia</a></li>
+                                <li><a href="#" class="info-unit">Tablas en HTML</a></li>
+                                <li><a href="#" class="info-unit">Formularios y validación básica</a></li>
+                            </ul>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-orange-outline">Ejercicio Integrador</button>
+                            </div>                        
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <!-- Unidad 2 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="heading2">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                    Unidad 2: CSS
-                </button>
-            </h2>
-            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#studyPlanAccordion">
-                <div class="accordion-body">
-                    <ul class="list-unstyled temario-list">
-                        <li><a href="#">Introducción a CSS</a></li>
-                        <li><a href="#">Selectores y especificidad</a></li>
-                        <li><a href="#">Propiedades de texto y fuentes</a></li>
-                        <li><a href="#">Colores y fondos</a></li>
-                        <li><a href="#">Modelos de caja (Box Model)</a></li>
-                        <li><a href="#">Posicionamiento y display</a></li>
-                        <li><a href="#">Diseño responsivo con media queries</a></li>
-                        <li><a href="#">Animaciones básicas en CSS</a></li>
-                    </ul>
-                    <div class="mt-3 p-2 text-center bg-danger text-white rounded">Ejercicio Integrador </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            Unidad 2: CSS
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#studyPlanAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled temario-list d-flex flex-column justify-content-start align-items-start">
+                                <li><a href="#" class="info-unit">Introducción a CSS</a></li>
+                                <li><a href="#" class="info-unit">Selectores y especificidad</a></li>
+                                <li><a href="#" class="info-unit">Propiedades de texto y fuentes</a></li>
+                                <li><a href="#" class="info-unit">Colores y fondos</a></li>
+                                <li><a href="#" class="info-unit">Modelos de caja (Box Model)</a></li>
+                                <li><a href="#" class="info-unit">Posicionamiento y display</a></li>
+                                <li><a href="#" class="info-unit">Diseño responsivo con media queries</a></li>
+                                <li><a href="#" class="info-unit">Animaciones básicas en CSS</a></li>
+                            </ul>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-orange-outline">Ejercicio Integrador</button>
+                            </div>                        
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <!-- Unidad 3 -->
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="heading3">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                    Unidad 3: JAVASCRIPT
-                </button>
-            </h2>
-            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#studyPlanAccordion">
-                <div class="accordion-body">
-                    <ul class="list-unstyled temario-list">
-                        <li><a href="#">Introducción a JavaScript</a></li>
-                        <li><a href="#">Variables y tipos de datos</a></li>
-                        <li><a href="#">Operadores y expresiones</a></li>
-                        <li><a href="#">Estructuras de control (if, switch, bucles)</a></li>
-                        <li><a href="#">Funciones y alcance</a></li>
-                        <li><a href="#">Manipulación del DOM</a></li>
-                        <li><a href="#">Eventos en JavaScript</a></li>
-                        <li><a href="#">Programación orientada a objetos en JavaScript</a></li>
-                        <li><a href="#">Consumo de APIs con Fetch</a></li>
-                        <div class="mt-3 p-2 text-center bg-danger text-white rounded">Ejercicio Integrador </div>
-                    </ul>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            Unidad 3: JAVASCRIPT
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#studyPlanAccordion">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled temario-list d-flex flex-column justify-content-start align-items-start">
+                                <li><a href="#" class="info-unit">Introducción a JavaScript</a></li>
+                                <li><a href="#" class="info-unit">Variables y tipos de datos</a></li>
+                                <li><a href="#" class="info-unit">Operadores y expresiones</a></li>
+                                <li><a href="#" class="info-unit">Estructuras de control (if, switch, bucles)</a></li>
+                                <li><a href="#" class="info-unit">Funciones y alcance</a></li>
+                                <li><a href="#" class="info-unit">Manipulación del DOM</a></li>
+                                <li><a href="#" class="info-unit">Eventos en JavaScript</a></li>
+                                <li><a href="#" class="info-unit">Programación orientada a objetos en JavaScript</a></li>
+                                <li><a href="#" class="info-unit">Consumo de APIs con Fetch</a></li>
+                            </ul>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn btn-orange-outline">Ejercicio Integrador</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </div>  
+        </section>
         <div class="mt-4">
             <h2 class="section-title">Consulta</h2>
             <p>¿Estás teniendo problemas con el aprendizaje? Te recomiendo que consultes a nuestra IA Learny.</p>
             <div class="d-flex justify-content-center">
-                <img src="../img/consulta_ia.png" alt="Asistencia IA 'Learny'" class="img-fluid rounded shadow" style="max-width: 400px; border: 16px solid #F26A4B;border-radius: 20px; cursor: pointer;">
+                <img src="../img/consulta_ia.png" alt="Asistencia IA 'Learny'" class="img-fluid rounded shadow" style="max-width: 400px; border: 16px solid #F26A4B; border-radius: 50px; cursor: pointer;">
             </div>
         </div>       
     </main>
     <footer class="bg-dark-grey text-start text-white px-5 mt-0">
         <div class="container p-4">
             <section class="">
-                <div class="row">
-                    <div class="d-flex justify-content-center align-items-center col-12 col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-0" id="logo-section">
+                <div class="d-flex justify-content-center" id="footerContainer">
+                    <div class="d-flex justify-content-center align-items-center col-md-6 col-sm-6" id="logo-section">
                         <div class="d-flex justify-content-center align-items-center">
                             <a class="navbar-brand" href="home.html"><img src="../img/brand.svg" alt="" width="48" height="48"></a>
                             <span class="text-light-grey size-14 p-1">@Learny 2024</span>
                         </div>
                     </div>
-                    <div class="col-6 col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-2">
-                        <h5 class="fw-bold size-18">Sitio</h5>
-                        <ul class="list-unstyled mb-0">
-                            <li>
-                                <a href="#" class="text-decoration-none size-14">Inicio</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-decoration-none size-14">Cursos</a>
-                            </li>
-                            <li>
-                                <a href="#" class="text-decoration-none size-14">Nosotros</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-0">
-                        <h5 class="fw-bold size-18">Contactanos</h5>
-                        <ul class="list-unstyled mb-0">
-                        <li class="pt-2">
-                            <span class="size-14">011-5555-5555</span>
-                        </li>
-                        <li class="pt-1">
-                            <span class="size-14"><a href="mailto:info@learny.com.ar" class="text-decoration-none"> info@learny.com.ar</a></span>
-                        </li>
-                        <li class="pt-1">
-                            <span class="size-14"><a href="mailto:ventas@learny.com.ar" class="text-decoration-none"> ventas@learny.com.ar</a></span>
-                        </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-0" id="footer-social-media">
+                    <div class="col-md-6 col-sm-6" id="footer-social-media">
                         <h5 class="fw-bold size-18">¡Seguinos en nuestras redes!</h5>
                         <span class="text-center">
                             <a href="#" target="_blank">
@@ -254,7 +309,7 @@
             </section>
         </div>
     </footer>
-</section>
-</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
 </body>
 </html>

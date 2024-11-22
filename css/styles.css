@@ -377,16 +377,14 @@ option:hover {
         width: 60%;
     }
 
+    .no-mobile {
+        display: none !important;
+    }
+
     #offcanvasMobile {
         display: block !important;
         overflow-y: scroll;
         width: 100%;
-    }
-
-    .mobile-center {
-        display: flex;
-        flex-direction: column !important;
-        align-items: center !important;
     }
 }
 
@@ -409,13 +407,18 @@ option:hover {
         display: none !important;
     }
 
+
+
 }
 
 @media screen and (min-height: 900px) {
     #footer-fixed-bottom {
       position: fixed;
       bottom: 0;
-      width: 100%; } }
+      width: 100%; } 
+    
+    
+    }
 
 
 /* MINI DESKTOP */
@@ -489,6 +492,21 @@ a {
         height: 30%;
     }
 
+    
+    .mobile-center {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .card.m-sm-1.mobile-mt-1 {
+        text-align: center;
+    }
+
+    main {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
 
 }
 
